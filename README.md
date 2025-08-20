@@ -27,13 +27,13 @@ Make sure you have installed:
 ### 1. Frontend (React)
 
 1. Navigate to the frontend folder:
-   cd frontend
-   npm install
-   npm start
 2. Navigate to backend folder:
+```bash
+cd frontend
+npm install
+npm start
+
+
    cd backend
    npm install
    node server.js
-
-```bash
-cd frontend
