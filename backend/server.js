@@ -1,23 +1,19 @@
-const express = require("express");
-const cors = require("cors");
-require("dotenv").config();
+const express = require('express');
+const cors = require('cors');
+require('dotenv').config();
+
+const authRoutes = require('./routes/authRoutes');
+const staffRoutes = require('./routes/staffRoutes');
 
 const app = express();
-const PORT = process.env.PORT || 5000;
 
-// Middleware
+// Middlewares
 app.use(cors());
-app.use(express.json()); // for parsing JSON requests
+app.use(express.json());
 
-// Test Route
-app.get("/", (req, res) => {
-  res.json({ message: "Backend is running 🚀" });
-});
+// Routes
+app.use('/api/auth', authRoutes);
+app.use('/api/staff', staffRoutes);
 
-// Import routes (if any)
-// const userRoutes = require("./routes/userRoutes");
-// app.use("/api/users", userRoutes);
-
-app.listen(PORT, () => {
-  console.log(`✅ Server is running on http://localhost:${PORT}`);
-});
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
