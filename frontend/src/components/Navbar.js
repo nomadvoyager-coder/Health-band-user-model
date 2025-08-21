@@ -23,10 +23,11 @@ const Navbar = () => {
       className="flex items-center justify-between px-6 py-4"
       style={{ backgroundColor: colors.dark, color: colors.light }}
     >
-      <h1 className="text-xl font-bold cursor-pointer" onClick={() => navigate('/')} >
-        Staff Dashboard
+      <h1 className="text-5xl font-bold cursor-pointer" onClick={() => navigate('/')} >
+        Health Tracker
       </h1>
       <ul className="flex space-x-6">
+        <li className="cursor-pointer hover:opacity-80" onClick={() => navigate('/')}>Dashboard</li>
         <li className="cursor-pointer hover:opacity-80" onClick={() => navigate('/profile')}>Profile</li>
         <li className="cursor-pointer hover:opacity-80" onClick={() => navigate('/vitals')}>Health Vitals</li>
         <li className="cursor-pointer hover:opacity-80" onClick={() => navigate('/room-logs')}>Room Logs</li>
