@@ -1,5 +1,5 @@
 const pool = require('../config/db');
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
 const loginStaff = async (req, res) => {
